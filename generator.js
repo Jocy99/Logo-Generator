@@ -2,9 +2,9 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 const svgTemplate = require('./svg-template'); // SVG template content
 
+
 // Prompt the user for perfered logo details
-inquirer
-  .prompt([
+const questions = [
     {
       type: 'list',
       name: 'color',
@@ -28,10 +28,13 @@ inquirer
       message: 'Enter the filename for your SVG logo (without extension):',
       default: 'logo',
     },
-  ])
+  ];
+  // Prompt user with questions and generate readme
+inquirer
+.prompt(questions)
   .then((answers) => {
     // Generate SVG content based on user input
-    const svgContent = svgTemplate(answers.color, answers.shape, answers.text);
+    const svgContent = svgTemplate(answers.color, answers.shape, answers.text, answers.fileName);
 
     // Save SVG content to a .svg file
     const fileName = `${answers.fileName}.svg`;
