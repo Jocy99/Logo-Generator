@@ -1,6 +1,6 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
-const svgTemplate = require('./svg-template'); // SVG template content
+const svgTemplate = require('./assets/js/svg-template'); // SVG template content
 
 
 // Prompt the user for perfered logo details
@@ -29,6 +29,7 @@ const questions = [
       default: 'logo',
     },
   ];
+  
   // Prompt user with questions and generate readme
 inquirer
 .prompt(questions)

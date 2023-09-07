@@ -2,9 +2,10 @@
   "name": "logo-generator",
   "version": "1.0.0",
   "description": "![Logo Builder CLI](logo.png)",
-  "main": "generator.js",
+  "main": "index.js",
   "scripts": {
-    "test": "hello"
+    "start": "node index.js",
+    "test": "jest"
   },
   "repository": {
     "type": "git",

@@ -1,6 +1,4 @@
-const { Circle } = require('./shapes');
-const { Triangle } = require('./shapes');
-const { Square } = require('./shapes');
+const { Circle , Triangle, Square} = require('./shapes');
 
 const svgTemplate = (color, shape, text) => {
     let shapeType;
@@ -27,6 +25,3 @@ const svgTemplate = (color, shape, text) => {
 };
 
 module.exports = svgTemplate;
-//   render() {
-// return `<svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg"></svg>`;
-// };
